@@ -1,5 +1,7 @@
-## Synergizing Motion and Appearance: Multi-Scale Compensatory Codebooks for Talking Head Video Generation
-<center>这一行需要居中</center>
+# Synergizing Motion and Appearance: Multi-Scale Compensatory Codebooks for Talking Head Video Generation
+
+[Shuling Zhao]()<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<sup>1</sup> &emsp; [Xiaoshui Huang](https://xiaoshuihuang.github.io/)<sup>1</sup> &emsp; [Dan Xu](https://www.danxurgb.net/)<sup>1</sup>
+
 
 ### Citation
   
