@@ -11,7 +11,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 </div>
 
 <!--<img src='assets/teaser.gif'>-->
-<img src="assets/sota_qualitative-min.png">
+<img src="assets/sota_qualitative_min.png" width="800px"/>
 
 ## Updates
 - **`2024/10/21`**: We created this repo.
