@@ -22,6 +22,8 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 
 ### More Generalization Results
 <img src="assets/generalization_result.gif"  width="800px"/>
+<img src="assets/generalization_result_1.gif"  width="800px"/>
+<img src="assets/generalization_result_2.gif"  width="800px"/>
 </div>
 
 ## Updates
