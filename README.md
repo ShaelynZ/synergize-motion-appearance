@@ -13,9 +13,15 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 
 <!--<img src='assets/teaser.gif'>-->
 <img src="assets/sota_qualitative_min.png" width="800px"/>
+
+
+## Cross-identity Reenactment
 <img src="assets/video1.gif" width="400px"/> <img src="assets/video3.gif" width="400px"/>
 <img src="assets/video2.gif" width="400px"/> <img src="assets/video4.gif" width="400px"/>
-<img src="assets/generalization_result.gif"/>
+
+
+## More Generalization Results
+<img src="assets/generalization_result.gif"  width="800px"/>
 </div>
 
 ## Updates
