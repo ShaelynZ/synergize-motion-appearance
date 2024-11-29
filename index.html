@@ -120,7 +120,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href= "https://github.com/google/nerfies"
+                <a href= "https://github.com/ShaelynZ/synergize-motion-appearance"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -168,6 +168,19 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <div id="container" style="float:left;text-align:center;width:16%">
+            <p style="font-size:20px; ">
+              <b>Driving Video</b>
+            </p>
+      </div>
+
+      <div id="container" style="float:left;text-align:center;width:84%">
+            <p style="font-size:20px; ">
+              <b>Generated Videos</b>
+            </p>
+      </div>
+      <div id="clear" style="clear:both"></div>
+
       <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/celebrity_1_1.mp4"
                 type="video/mp4">
@@ -245,14 +258,97 @@
             <p>
                 Overview of the framework. For each scale, multi-scale motion and appearance codebook compensation consists of two submodules. (i) <b>Motion Codebook Compensation (MCC)</b> compensates for a motion flow with the motion codebook. (ii) To refine the source facial feature warped by the compensated motion flow, <b>Appearance Codebook Compensation (ACC)</b> produces the compensated appearance feature with the appearance codebook for image decoding. These two sub-modules are employed for all scales. We learn the motion and appearance codebooks jointly with the whole framework.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
             <!-- Results. -->
             <div style="text-align: center;">
                 <h2 class="title is-3">Results</h2>
             </div>
+            <h3 class="title is-4">Effect of Joint Motion and Appearance Codebook Learning</h3>
+            <h3 class="title is-5">Motion Flow Reconstruction with Motion Codebook</h3>
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/demo_Motion_Flow_Reconstruction.mp4"
+                      type="video/mp4">
+            </video>
 
+            <h3 class="title is-5">Driving Appearance Feature Reconstruction with Appearance Codebook</h3>
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/demo_Appearance_Feature_Reconstruction.mp4"
+                      type="video/mp4">
+            </video>
+
+            <h3 class="title is-4">Effect of Multi-scale Codebook Compensation</h3>
+            <h3 class="title is-5">Multi-scale Motion Codebook Compensation</h3>
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/demo_Multi-scale_Motion_Codebook_Compensation.mp4"
+                      type="video/mp4">
+            </video>
+
+            <h3 class="title is-5">Multi-scale Appearance Codebook Compensation</h3>
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/demo_Multi-scale_Appearance_Codebook_Compensation.mp4"
+                      type="video/mp4">
+            </video>
+
+            <h3 class="title is-4">Comparison with State-of-the-art Methods</h3>
+            <div style="text-align: center;">
+              <img src="static/images/sota_comparison.png"
+              class="body"
+              alt="Interpolate start reference image. " width="100%"/>
+            </div>
+
+            <h3 class="title is-5">Same-identity Reconstruction</h3>
+            <div id="container" style="float:left;text-align:center;width:49%">
+                <video id="demo_sameid_1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/demo_sameid_1.mp4"
+                          type="video/mp4">
+                </video>
+            </div>
+
+            <div id="container" style="float:right;text-align:center;width:49%">
+              <video id="demo_sameid_1" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/demo_sameid_2.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div id="clear" style="clear:both"></div>
+
+            <h3 class="title is-5">Cross-identity Reenactment</h3>
+            <div id="container" style="float:left;text-align:center;width:49%">
+              <video id="demo_sameid_1" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/demo_crossid_1.mp4"
+                        type="video/mp4">
+              </video>
+          </div>
+
+          <div id="container" style="float:right;text-align:center;width:49%">
+            <video id="demo_sameid_1" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/demo_crossid_2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div id="clear" style="clear:both"></div>
+
+
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
             <!-- Demo. -->
-            <div class="content has-text-centered">
+            <!-- <div class="content has-text-centered">
                 <video id="replay-video"
                        controls
                        muted
@@ -262,18 +358,11 @@
                   <source src="static/videos/demo.mp4"
                           type="video/mp4">
                 </video>
-              </div>
+              </div>-->
 
-            <div style="text-align: center;">
-                <img src="static/images/sota_comparison.png"
-                class="body"
-                alt="Interpolate start reference image. " width="100%"/>
-            </div>
-            <!-- <h3 class="title is-4">Same-identity Reconstruction </h3> -->
+            
 
-        </div>
-      </div>
-    </div>
+
     <!--/ Animation. -->
 
 
@@ -304,8 +393,7 @@
     </div> -->
     <!--/ Concurrent Work. -->
 
-  </div>
-</section>
+
 
 
 <section class="section" id="BibTeX">
@@ -328,7 +416,7 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/ShaelynZ/synergize-motion-appearance" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
       
