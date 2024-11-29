@@ -30,7 +30,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 - **`2024/10/21`**: We created this repo.
 
 ## Acknowledgements
-Our implementation is based on [FOMM](https://github.com/AliaksandrSiarohin/first-order-model) and [CodeFormer](https://github.com/sczhou/CodeFormer). We appreciate their great works.
+Our implementation is based on [FOMM](https://github.com/AliaksandrSiarohin/first-order-model), [MRFA](https://github.com/JialeTao/MRFA) and [CodeFormer](https://github.com/sczhou/CodeFormer). We appreciate their great works.
 
 ## Citation
 
