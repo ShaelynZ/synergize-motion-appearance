@@ -12,7 +12,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 
 
 <!--<img src='assets/teaser.gif'>-->
-<img src="assets/sota_qualitative_min.png" width="800px"/>
+<img src="assets/sota_comparison.png" width="800px"/>
 
 
 ### Cross-identity Reenactment Results
