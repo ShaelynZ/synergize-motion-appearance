@@ -17,14 +17,14 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 
 
 ### Cross-identity Reenactment Results
-<img src="assets/video1.gif" width=49%/> <img src="assets/video3.gif" width=49%/>
-<img src="assets/video2.gif" width=49%/> <img src="assets/video4.gif" width=49%/>
+<img src="assets/video1.gif" width="49%"/> <img src="assets/video3.gif" width="49%"/>
+<img src="assets/video2.gif" width="49%"/> <img src="assets/video4.gif" width="49%"/>
 
 
 ### More Generalization Results
-<img src="assets/generalization_result_1.gif"  width=100%/>
-<img src="assets/generalization_result_2.gif"  width=100%/>
-<img src="assets/generalization_result_3.gif"  width=100%/>
+<img src="assets/generalization_result_1.gif"  width="100%"/>
+<img src="assets/generalization_result_2.gif"  width="100%"/>
+<img src="assets/generalization_result_3.gif"  width="100%"/>
 <!-- <div id='results' style="margin-bottom:-1">
 <img src="assets/generalization_result_1.gif"  width=100%/>
 <img src="assets/generalization_result_2.gif"  width=100%/>
@@ -33,8 +33,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 -->
 </div>
 
-<body>
-<div>
+<!-- 
   <div style="float:left;text-align:center;width:16%">
           Driving Video
   </div>
@@ -43,9 +42,9 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 
               Generated Videos
   </div>
-</div>
-</body>
+
 <div id="clear" style="clear:both"></div>
+-->
 
 
 ## Updates
