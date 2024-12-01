@@ -31,6 +31,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 <img src="assets/generalization_result_3.gif"  width=100%/>
 </div>
 -->
+</div>
 <div id="container" style="float:left;text-align:center;width:16%">
         <!--<p style="font-size:20px; ">
           <b>Driving Video</b>
@@ -46,7 +47,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
     </p>
 </div>
 <div id="clear" style="clear:both"></div>
-</div>
+
 
 ## Updates
 - **`2024/11/29`**: We released this repo.
