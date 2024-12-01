@@ -39,7 +39,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
         <p>
           Driving Video
         </p>
-      </div>
+</div>
 
 <div id="container" style="float:left;text-align:center;width:84%">
     <p>
