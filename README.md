@@ -11,40 +11,22 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 <a href=''><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
 
 
-<!--<img src='assets/teaser.gif'>-->
+<img src="assets/generalization_result_1.gif"  width="100%"/>
+<img src="assets/generalization_result_2.gif"  width="100%"/>
+<img src="assets/generalization_result_3.gif"  width="100%"/>
 
-<img src="assets/sota_comparison.png" width=100%/>
+
+<!--<img src="assets/sota_comparison.png" width=100%/>-->
 
 
 ### Cross-identity Reenactment Results
 <img src="assets/video1.gif" width="49%"/> <img src="assets/video3.gif" width="49%"/>
 <img src="assets/video2.gif" width="49%"/> <img src="assets/video4.gif" width="49%"/>
 
+### Method
+<img src="assets/overview.png"  width="100%"/>
 
-### More Generalization Results
-<img src="assets/generalization_result_1.gif"  width="100%"/>
-<img src="assets/generalization_result_2.gif"  width="100%"/>
-<img src="assets/generalization_result_3.gif"  width="100%"/>
-<!-- <div id='results' style="margin-bottom:-1">
-<img src="assets/generalization_result_1.gif"  width=100%/>
-<img src="assets/generalization_result_2.gif"  width=100%/>
-<img src="assets/generalization_result_3.gif"  width=100%/>
 </div>
--->
-</div>
-
-<!-- 
-  <div style="float:left;text-align:center;width:16%">
-          Driving Video
-  </div>
-
-  <div style="float:left;text-align:center;width:84%">
-
-              Generated Videos
-  </div>
-
-<div id="clear" style="clear:both"></div>
--->
 
 
 ## Updates
