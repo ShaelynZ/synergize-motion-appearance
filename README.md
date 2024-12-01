@@ -32,7 +32,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 </div>
 -->
 </div>
-<div id="container" style="float:left;text-align:center;width:16%">
+<div id="container1" style="float:left;text-align:center;width:16%">
         <!--<p style="font-size:20px; ">
           <b>Driving Video</b>
         </p> -->
@@ -41,7 +41,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
         </p>
 </div>
 
-<div id="container" style="float:left;text-align:center;width:84%">
+<div id="container2" style="float:left;text-align:center;width:84%">
     <p>
               Generated Videos
     </p>
