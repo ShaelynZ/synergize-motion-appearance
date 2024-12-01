@@ -46,6 +46,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
     </p>
 </div>
 <div id="clear" style="clear:both"></div>
+</div>
 
 ## Updates
 - **`2024/11/29`**: We released this repo.
