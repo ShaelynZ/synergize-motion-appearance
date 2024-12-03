@@ -8,7 +8,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 <sup>2</sup>Shanghai Jiao Tong University
 
 <!-- <a href='https://arxiv.org/abs/2403.11641'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a> -->
-<a href=''><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
+<a href='https://arxiv.org/abs/2412.00719'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
 
 
 <img src="assets/generalization_result_1.gif"  width="100%"/>
@@ -37,14 +37,14 @@ Our implementation is based on [FOMM](https://github.com/AliaksandrSiarohin/firs
 
 ## Citation
 ```
-@misc{zhao2024synergizingmotionandappearance,
-title={Synergizing Motion and Appearance: Multi-Scale Compensatory Codebooks for Talking Head Video Generation}, 
-author={Shuling Zhao and Fa-Ting Hong and Xiaoshui Huang and Dan Xu},
-year={2024},
-eprint={xxxx.xxxx},
-archivePrefix={arXiv},
-primaryClass={cs.CV},
-url={https://arxiv.org/abs/xxxx.xxxx}, 
+@misc{zhao2024synergizingmotionappearancemultiscale,
+      title={Synergizing Motion and Appearance: Multi-Scale Compensatory Codebooks for Talking Head Video Generation}, 
+      author={Shuling Zhao and Fa-Ting Hong and Xiaoshui Huang and Dan Xu},
+      year={2024},
+      eprint={2412.00719},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.00719}, 
 }
 ```
 
