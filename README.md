@@ -7,7 +7,6 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 <sup>1</sup>The Hong Kong University of Science and Technology <br>
 <sup>2</sup>Shanghai Jiao Tong University
 
-<!-- <a href='https://arxiv.org/abs/2403.11641'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a> -->
 <a href='https://arxiv.org/abs/2412.00719'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
 
 
