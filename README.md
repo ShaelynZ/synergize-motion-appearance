@@ -24,7 +24,7 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 <img src="assets/video2_min.gif" width="49%"/> <img src="assets/video4_min.gif" width="49%"/>
 
 ### Method
-<img src="assets/overview_compressed.jpg"  width="100%"/>
+<img src="assets/overview.jpg"  width="100%"/>
 
 </div>
 
