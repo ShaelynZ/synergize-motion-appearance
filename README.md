@@ -11,20 +11,20 @@ Shuling Zhao<sup>1</sup> &emsp; [Fa-Ting Hong](https://harlanhong.github.io/)<su
 <a href='https://arxiv.org/abs/2412.00719'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
 
 
-<img src="assets/generalization_result_1.gif"  width="100%"/>
-<img src="assets/generalization_result_2.gif"  width="100%"/>
-<img src="assets/generalization_result_3.gif"  width="100%"/>
+<img src="assets/generalization_result_1_min.gif"  width="100%"/>
+<img src="assets/generalization_result_2_min.gif"  width="100%"/>
+<img src="assets/generalization_result_3_min.gif"  width="100%"/>
 
 
 <!--<img src="assets/sota_comparison.png" width=100%/>-->
 
 
 ### Cross-identity Reenactment Results
-<img src="assets/video1.gif" width="49%"/> <img src="assets/video3.gif" width="49%"/>
-<img src="assets/video2.gif" width="49%"/> <img src="assets/video4.gif" width="49%"/>
+<img src="assets/video1_min.gif" width="49%"/> <img src="assets/video3_min.gif" width="49%"/>
+<img src="assets/video2_min.gif" width="49%"/> <img src="assets/video4_min.gif" width="49%"/>
 
 ### Method
-<img src="assets/overview.png"  width="100%"/>
+<img src="assets/overview_compressed.jpg"  width="100%"/>
 
 </div>
 
