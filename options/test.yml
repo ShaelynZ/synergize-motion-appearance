@@ -1,0 +1,108 @@
+# general settings
+name: appearance-motion-compensation
+model_type: AppMotionCompModel
+num_gpu: 1
+manual_seed: 0
+
+# network structures
+network_g:
+  type: AppMotionCompFormer
+  with_position_emb: True
+  # AutoEncoder params
+  img_size: 256
+  nf: 64
+  ch_mult: [1,2,2,4] 
+
+  num_kp: 15
+
+  # quantization
+  quantizer_type: 'nearest'
+  beta: 0.25
+  # transformer
+  n_head: 8
+
+  # Motion
+  warp_s_d_kp_query: true
+  MRFA_motion_enc: true
+  motion_codebook_split: true
+  multiscale_feature_fusion: true
+  codebook_size_motion: 1024 
+  embed_dim_motion: 32
+  dim_embd_motion: 32
+  n_layers_motion: 2 
+
+  # Appearance
+  codebook_size_app: 1024
+  embed_dim_app: 256
+  dim_embd_app: 256
+  n_layers_app: 2 
+  split: 1 
+
+  app_codebook_split: True
+  connect_list: ['64', '128', '256']  
+  connect_app_list: ['32', '64', '128', '256']  
+  fix_modules: [] 
+  ae_path: ~ # pretrained AE
+
+network_motion_estimator:
+  type: Motion_Estimator_keypoint_aware
+  common_params:
+    num_kp: 15
+    num_channels: 3
+
+  dense_motion_params:
+    block_expansion: 64
+    max_features: 1024
+    num_blocks: 5
+    scale_factor: 0.25
+    estimate_occlusion_map: True
+
+  kp_detector_params:
+    temperature: 0.1
+    block_expansion: 32
+    max_features: 1024
+    scale_factor: 0.25
+    num_blocks: 5
+    estimate_jacobian: True
+
+# path
+path:
+  pretrain_network_g: ./pretrained_models/net_g_latest.pth 
+  param_key_g: params_ema
+  strict_load_g: true
+
+  pretrain_network_motion_estimator: ./pretrained_models/net_motion_estimator_latest.pth 
+  strict_load_motion_estimator: true
+
+  save_path: ./test_log
+
+# validation settings
+val:
+  save_img: true
+  cross_id: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0 
+      test_y_channel: false
+    
+    fid:
+      type: calculate_fid
+    
+    l1:
+      type: calculate_l1
+      crop_border: 0 
+    
+    lpips:
+      type: calculate_lpips
+    
+    face_akd:
+      type: cmp_face_akd
+      is_video: false
+      size: [256,256]
+    
+    face_aed:
+      type: cmp_face_aed
+      is_video: False
+      size: [256,256]

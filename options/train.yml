@@ -1,0 +1,220 @@
+# general settings
+name: appearance-motion-compensation
+model_type: AppMotionCompModel
+num_gpu: 4
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: VoxCeleb1
+    type: FramesMotionTransferDataset
+    root_dir: /path-to-data/vox1_frames
+    id_sampling: True
+    is_train: True
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+    gt_size: 256 
+    mean: [0.5, 0.5, 0.5]
+    std: [0.5, 0.5, 0.5]
+    use_hflip: true
+    use_time_flip: true 
+
+    # data loader
+    num_worker_per_gpu: 4 
+    batch_size_per_gpu: 4 
+    dataset_enlarge_ratio: 100
+    prefetch_mode: ~
+
+# network structures
+network_g:
+  type: AppMotionCompFormer 
+  with_position_emb: True
+  # AutoEncoder params
+  img_size: 256
+  nf: 64
+  ch_mult: [1,2,2,4] 
+
+  num_kp: 15
+
+  # quantization
+  quantizer_type: 'nearest'
+  beta: 0.25
+  # transformer
+  n_head: 8
+
+  # Motion
+  warp_s_d_kp_query: true
+  MRFA_motion_enc: true
+  motion_codebook_split: true
+  multiscale_feature_fusion: true
+  codebook_size_motion: 1024 
+  embed_dim_motion: 32
+  dim_embd_motion: 32
+  n_layers_motion: 2 
+
+  # Appearance
+  codebook_size_app: 1024
+  embed_dim_app: 256
+  dim_embd_app: 256
+  n_layers_app: 2 
+  split: 1 
+
+  app_codebook_split: True
+  connect_list: ['64', '128', '256']  
+  connect_app_list: ['32', '64', '128', '256']  
+  fix_modules: [] 
+  ae_path: ~ # pretrained AE
+
+network_motion_estimator:
+  type: Motion_Estimator_keypoint_aware
+  common_params:
+    num_kp: 15
+    num_channels: 3
+
+  dense_motion_params:
+    block_expansion: 64
+    max_features: 1024
+    num_blocks: 5
+    scale_factor: 0.25
+    estimate_occlusion_map: True
+
+  kp_detector_params:
+    temperature: 0.1
+    block_expansion: 32
+    max_features: 1024
+    scale_factor: 0.25
+    num_blocks: 5
+    estimate_jacobian: True
+  
+network_d:
+  type: VQGANDiscriminator
+  nc: 3
+  ndf: 64
+  n_layers: 4
+
+# path
+path:
+  pretrain_network_g: 
+  param_key_g: params_ema
+  strict_load_g: true
+  pretrain_network_d: 
+  strict_load_d: true
+
+  pretrain_network_motion_estimator: 
+  strict_load_motion_estimator: true
+
+  resume_state: 
+  save_path: ./train_log
+
+train:
+  optim_g:
+    type: Adam
+    lr: !!float 8e-5 
+    weight_decay: 0
+    betas: [0.9, 0.99]
+  
+  optim_motion:
+    type: Adam
+    lr: !!float 8e-5 
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  optim_d:
+    type: Adam
+    lr: !!float 8e-5 
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [200000, 225000] 
+    gamma: 0.5
+
+  total_iter: 250000 
+
+  warmup_iter: -1  # no warm up
+  ema_decay: 0.995
+
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+  perceptual_opt:
+    type: MultiScalePyramidPerceptualLoss 
+    scales: [1, 0.5, 0.25, 0.125]
+    num_channels: 3
+    loss_weights: [1.0, 1.0, 1.0, 1.0, 1.0]
+  
+  lr_pixel_perceptual_opt:
+    loss_weight: [0.5]
+
+  gan_opt:
+    type: GANLoss
+    gan_type: hinge
+    loss_weight: !!float 1.0 # adaptive_weighting
+
+  # codebook training
+  motion_codebook_code_opt:
+    loss_weight: 1.0
+  
+  motion_codebook_recon_opt:
+    type: L1Loss
+    loss_weight: 32.0
+    reduction: mean
+  
+  app_codebook_code_opt:
+    loss_weight: 1.0
+   
+  equivariance_opt:
+    type: EquivarianceLoss
+    use_value: true
+    use_jacobian: true
+    loss_weight_value: 1.0
+    loss_weight_jacobian: 1.0
+    transform_params:
+      sigma_affine: 0.05
+      sigma_tps: 0.005
+      points_tps: 5
+  
+  kp_distance_opt:
+    type: KPDistanceLoss
+    loss_weight: 1.0  
+  
+  use_adaptive_weight: true
+
+  fix_generator: false # jointly train
+
+
+  net_g_start_iter: 0
+  net_d_iters: 1
+  net_d_start_iter: 5001
+  manual_seed: 0
+
+# validation settings
+val:
+  val_freq: !!float 5e10 # no validation
+  save_img: true
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+
+# logging settings
+logger:
+  print_freq: 50 
+  save_checkpoint_freq: !!float 5e3 
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29412
