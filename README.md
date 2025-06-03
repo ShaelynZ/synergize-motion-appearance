@@ -75,7 +75,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 3. Create `options/train_[dataset_name].yml` similar to `options/train.yml`, in `datasets` specify the dataset name `name: [dataset_name]`, root dir  `root_dir: /path-to-data/[dataset_name]`. Also adjust the training iterations `total_iter` in `train`.
 
 ## Acknowledgement
-Our implementation is based on [FOMM](https://github.com/AliaksandrSiarohin/first-order-model), [MRFA](https://github.com/JialeTao/MRFA) and [CodeFormer](https://github.com/sczhou/CodeFormer). We appreciate their great works.
+Our implementation is based on [FOMM](https://github.com/AliaksandrSiarohin/first-order-model), [MCNet](https://github.com/harlanhong/ICCV2023-MCNET), [MRFA](https://github.com/JialeTao/MRFA) and [CodeFormer](https://github.com/sczhou/CodeFormer). We appreciate their great works.
 
 ## Citation
 ```
