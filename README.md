@@ -79,14 +79,13 @@ Our implementation is based on [FOMM](https://github.com/AliaksandrSiarohin/firs
 
 ## Citation
 ```
-@misc{zhao2024synergizingmotionappearancemultiscale,
-      title={Synergizing Motion and Appearance: Multi-Scale Compensatory Codebooks for Talking Head Video Generation}, 
-      author={Shuling Zhao and Fa-Ting Hong and Xiaoshui Huang and Dan Xu},
-      year={2024},
-      eprint={2412.00719},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.00719}, 
+@InProceedings{Zhao_2025_CVPR,
+    author    = {Zhao, Shuling and Hong, Fa-Ting and Huang, Xiaoshui and Xu, Dan},
+    title     = {Synergizing Motion and Appearance: Multi-Scale Compensatory Codebooks for Talking Head Video Generation},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {26232-26241}
 }
 ```
 
